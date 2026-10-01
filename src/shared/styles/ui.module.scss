@@ -1,0 +1,207 @@
+@use './breakpoints';
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--brand-font-size, 1.375rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.logo {
+  width: var(--logo-size, 2.5rem);
+  height: var(--logo-size, 2.5rem);
+  display: grid;
+  place-items: center;
+  color: var(--color-white);
+  border-radius: var(--logo-radius, 12px);
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.125em;
+  font-weight: 650;
+  color: var(--color-muted);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+
+  input,
+  textarea {
+    min-width: 0;
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid var(--color-input-border);
+    background: var(--color-white);
+    border-radius: 10px;
+    padding: 0 var(--space-4);
+    color: var(--color-input-text);
+    font-weight: 400;
+    transition: border-color 0.15s;
+
+    &::placeholder {
+      color: var(--color-placeholder);
+    }
+
+    &:focus {
+      border-color: var(--color-input-focus);
+      outline: 3px solid var(--color-accent-background);
+      outline-offset: 0;
+    }
+
+    &:disabled {
+      background: var(--color-input-disabled-background);
+      color: var(--color-muted);
+    }
+  }
+
+  textarea {
+    padding: var(--space-2) var(--space-4);
+    line-height: 1.6;
+    resize: vertical;
+  }
+}
+
+.fieldHint {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.primaryButton {
+  border: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 11px;
+  padding: var(--space-4) var(--space-5);
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+  }
+
+  &:disabled {
+    background: var(--color-button-disabled-background);
+    color: var(--color-button-disabled-text);
+  }
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-secondary-border);
+  background: var(--color-white);
+  border-radius: 11px;
+  padding: var(--space-2) var(--space-5);
+  min-height: 3rem;
+  font-size: 0.875rem;
+
+  &:hover {
+    background: var(--color-secondary-hover);
+  }
+}
+
+.textButton {
+  border: 0;
+  background: none;
+  color: var(--color-text-button);
+  padding: var(--space-1) 0;
+  font-size: 0.875rem;
+  font-weight: 550;
+
+  &:disabled {
+    color: var(--color-muted);
+  }
+}
+
+.iconButton {
+  border: 0;
+  background: var(--color-transparent);
+  border-radius: 10px;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--color-icon-hover-background);
+    color: var(--color-icon-hover);
+  }
+}
+
+.formError {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 10px;
+  background: var(--color-error-background);
+  color: var(--color-error-text);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: var(--avatar-size, 3rem);
+  height: var(--avatar-size, 3rem);
+  border-radius: 50%;
+  background: var(--color-avatar-background);
+  color: var(--color-avatar-text);
+  font-size: 0.875rem;
+  font-weight: 650;
+  flex-shrink: 0;
+}
+
+.composerError {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.75rem;
+  color: var(--color-composer-error);
+  line-height: 1.5;
+}
+
+.modalDescription {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+
+  .primaryButton {
+    padding: var(--space-2) var(--space-5);
+  }
+}
+
+.modalError {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: breakpoints.$mobile) {
+  .modalActions {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,157 @@
+:root {
+  --color-primary: #075e54;
+  --color-primary-hover: #064b43;
+  --color-muted: #54656f;
+  --color-placeholder: #829099;
+  --color-text: #1f2c34;
+  --color-page-background: #f0f2f5;
+  --color-focus: #128c7e;
+  --color-link: #075e54;
+  --color-white: #fff;
+  --color-transparent: transparent;
+
+  --color-surface-border: #dfe5e7;
+  --color-date-background: #e2e8e3;
+  --color-empty-background: #e0f5e6;
+  --color-empty-icon: #128c7e;
+  --color-empty-title: #52665e;
+  --color-floating-border: #c7ddd0;
+  --color-floating-text: #075e54;
+  --color-menu-border: #dfe5e0;
+  --color-menu-shadow: rgb(17 42 34 / 18%);
+
+  --color-workspace-background: #ece5dd;
+  --color-welcome-icon: #128c7e;
+  --color-welcome-background: #e0f5e6;
+  --color-composer-border: #d1dadc;
+  --color-content-text: #27383d;
+  --color-composer-focus: #128c7e;
+  --color-send-background: #075e54;
+  --color-send-disabled-background: #e7eeeb;
+  --color-send-disabled-text: #8a9d96;
+  --color-send-hover: #064b43;
+  --color-warning-text: #795c22;
+  --color-warning-background: #fff5df;
+  --color-warning-border: #eee1c5;
+  --color-bubble-border: #dfe5e0;
+  --color-outgoing-background: #dcf8c6;
+  --color-message-status: #0078a8;
+  --color-failure-border: #dfb5b2;
+  --color-failure-divider: #e5ccc7;
+  --color-failure-text: #8c3c40;
+  --color-failure-action: #075e54;
+
+  --color-sidebar-border: #dfe5e7;
+  --color-count-background: #e6f2eb;
+  --color-accent-background: #e2f5e9;
+  --color-new-chat: #075e54;
+  --color-new-chat-hover: #d3edda;
+  --color-item-hover: #f2f7f4;
+  --color-footer-border: #e4e9e7;
+  --color-status-active: #25d366;
+  --color-status-inactive: #98a6a1;
+
+  --color-connect-background: #f0f2f5;
+  --color-service-label: #455a58;
+  --color-card-border: #dce4e1;
+  --color-symbol-background: #e2f5e9;
+  --color-hint-link: #075e54;
+  --color-footer-link: #075e54;
+  --color-blocked-text: #536a65;
+  --color-blocked-heading: #1f2c34;
+
+  --color-input-border: #cbd9d4;
+  --color-input-text: #1f2c34;
+  --color-input-focus: #128c7e;
+  --color-input-disabled-background: #f3f6f4;
+  --color-button-disabled-background: #d9e8e0;
+  --color-button-disabled-text: #60746c;
+  --color-secondary-border: #cbd9d4;
+  --color-secondary-hover: #eff6f1;
+  --color-text-button: #075e54;
+  --color-icon-hover-background: #e4f3e9;
+  --color-icon-hover: #075e54;
+  --color-error-background: #fff1ed;
+  --color-error-text: #9a4531;
+  --color-avatar-background: #d9f4df;
+  --color-avatar-text: #075e54;
+  --color-composer-error: #9c4842;
+  --color-modal-border: #d7e4dd;
+  --color-modal-text: #263b35;
+  --color-backdrop: rgb(17 42 34 / 36%);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+}
+
+html {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  color: var(--color-text);
+  background: var(--color-page-background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button,
+input,
+textarea {
+  outline-offset: var(--space-1);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+}
+
+a {
+  color: var(--color-link);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

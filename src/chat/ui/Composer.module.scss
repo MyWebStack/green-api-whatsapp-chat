@@ -1,0 +1,79 @@
+@use '../../shared/styles/breakpoints';
+
+.composerArea {
+  padding: var(--space-2) max(var(--space-6), calc((100% - 52rem) / 2)) var(--space-4);
+}
+
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  background: var(--color-white);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-5);
+  border: 1px solid var(--color-composer-border);
+  border-radius: 16px;
+
+  &:focus-within {
+    border-color: var(--color-composer-focus);
+  }
+
+  textarea {
+    flex: 1;
+    border: 0;
+    resize: none;
+    outline: 0;
+    min-height: 2.5rem;
+    max-height: 10rem;
+    padding: var(--space-2) 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: var(--color-transparent);
+    min-width: 0;
+    color: var(--color-content-text);
+
+    &::placeholder {
+      color: var(--color-placeholder);
+    }
+  }
+}
+
+.sendButton {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--color-send-background);
+  color: var(--color-white);
+  border: 0;
+  border-radius: 12px;
+
+  &:disabled {
+    background: var(--color-send-disabled-background);
+    color: var(--color-send-disabled-text);
+  }
+
+  &:hover:not(:disabled) {
+    background: var(--color-send-hover);
+  }
+}
+
+.composerHint {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin: var(--space-2) var(--space-1) 0;
+  line-height: 1.5;
+}
+
+@media (max-width: breakpoints.$mobile) {
+  .composerArea {
+    padding: var(--space-2) var(--space-2) max(var(--space-2), env(safe-area-inset-bottom));
+  }
+
+  .composer {
+    padding-left: var(--space-4);
+  }
+}

@@ -1,0 +1,105 @@
+@use '../../shared/styles/breakpoints';
+
+.messageRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: var(--space-2);
+
+  &.outgoing {
+    justify-content: flex-end;
+  }
+}
+
+.deletedText {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.bubble {
+  max-width: min(78%, 36rem);
+  min-width: 5rem;
+  background: var(--color-white);
+  padding: var(--space-2) var(--space-4) var(--space-1);
+  border-radius: 15px 15px 15px 4px;
+  border: 1px solid var(--color-bubble-border);
+
+  .outgoing & {
+    background: var(--color-outgoing-background);
+    border-color: var(--color-outgoing-background);
+    border-radius: 15px 15px 4px 15px;
+  }
+
+  .outgoing &.failedBubble {
+    border-color: var(--color-failure-border);
+  }
+}
+
+.messageText {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-content-text);
+}
+
+.messageMeta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.requestStatus {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-message-status);
+}
+
+.messageFailure {
+  border-top: 1px solid var(--color-failure-divider);
+  margin-top: var(--space-2);
+  padding: var(--space-2) 0 var(--space-1);
+  font-size: 0.75rem;
+  color: var(--color-failure-text);
+  line-height: 1.6;
+
+  p {
+    margin: var(--space-1) 0;
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+  }
+
+  button {
+    background: none;
+    border: 0;
+    padding: var(--space-1) 0;
+    color: var(--color-failure-action);
+    text-decoration: underline;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: breakpoints.$tablet) {
+  .bubble {
+    max-width: 87%;
+  }
+}
+
+@media (max-width: breakpoints.$mobile) {
+  .bubble {
+    max-width: 88%;
+  }
+}
