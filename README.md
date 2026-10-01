@@ -21,6 +21,12 @@
 
 </details>
 
+## Performance
+
+Результат проверки опубликованного приложения в Lighthouse: Performance, Accessibility, Best Practices и SEO — **100**.
+
+![Результаты Lighthouse](./docs/screenshots/lighthouse.png)
+
 ## Запуск
 
 Нужны Node.js 24 и авторизованный WhatsApp-инстанс GREEN-API.
