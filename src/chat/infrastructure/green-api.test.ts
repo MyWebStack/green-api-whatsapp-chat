@@ -277,7 +277,7 @@ describe('GREEN-API boundary', () => {
   it.each([408, 504])('verifies the instance after HTTP %s from the long poll', async (status) => {
     server.use(
       http.get(endpoint('receiveNotification'), ({ request }) => {
-        expect(new URL(request.url).searchParams.get('receiveTimeout')).toBe('10');
+        expect(new URL(request.url).searchParams.get('receiveTimeout')).toBe('5');
         return new HttpResponse('Timeout', { status });
       }),
     );

@@ -437,7 +437,7 @@ export class GreenApiGateway implements MessagingGateway {
   async receive(signal: AbortSignal) {
     try {
       return normalizeNotification(
-        await this.request('receiveNotification', 'GET', signal, undefined, '?receiveTimeout=10'),
+        await this.request('receiveNotification', 'GET', signal, undefined, '?receiveTimeout=5'),
         this.config.idInstance,
       );
     } catch (error) {

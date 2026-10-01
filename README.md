@@ -1,5 +1,7 @@
 # Диалог
 
+[Открыть приложение](https://mywebstack.github.io/green-api-whatsapp-chat/)
+
 Веб-клиент для личной переписки в WhatsApp через [GREEN-API](https://green-api.com/). Поиск по чатам, история сообщений, фотографии собеседников, непрочитанные, отправка и удаление своих сообщений. Переписка и черновики хранятся в памяти до обновления страницы.
 
 ![Переписка](./docs/screenshots/chat-desktop.png)
@@ -67,5 +69,3 @@ npm run test:e2e
 `check` запускает TypeScript, ESLint, модульные тесты и сборку. E2E-тесты работают с подменённым API.
 
 [CI](./.github/workflows/ci.yml) проверяет pull request и публикует приложение в GitHub Pages после push в `main`. Для другого хоста разместите `dist` после `npm run build`; базовый путь задаётся через `BASE_PATH`.
-
-Для публикации в настройках репозитория выберите **Settings → Pages → Source → GitHub Actions**.
